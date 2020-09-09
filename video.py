@@ -3,12 +3,13 @@ from bs4 import BeautifulSoup
 from retrying import retry
 import requests
 
-start_page = 69
+start_page = 1
 end_page = 100
 url = 'https://www.dygod.net/html/gndy/dyzz/index.html'
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+    # 此处改为自己的headers
 }
 
 for i in range(start_page, end_page + 1):
