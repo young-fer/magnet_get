@@ -18,7 +18,7 @@ headers = {
 def down_link(video_url):
 
     global num
-    video_res = requests.get(video_url, headers=headers, timeout=0.5)
+    video_res = requests.get(video_url, headers=headers, timeout=2)
     video_res.encoding = video_res.apparent_encoding
     html = BeautifulSoup(video_res.text, "html.parser")
     video_down = html.find("td", {"style": "WORD-WRAP: break-word"})
